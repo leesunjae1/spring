@@ -1,0 +1,15 @@
+package spring.core.ch01.ex07;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Main {
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext ctx = 
+				new AnnotationConfigApplicationContext(AppConfig.class);
+		
+		Lion lion = ctx.getBean(Lion.class);
+		lion.shout();
+		
+		ctx.close(); //컨테이너를 죽이는 방법이다
+	}
+}
