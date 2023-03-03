@@ -11,5 +11,6 @@ public class Main {
 		Shooter shooter2 = ctx.getBean("shooter2", Shooter.class);
 		
 		shooter1.fire();
+		shooter2.fire();
 	}
 }
