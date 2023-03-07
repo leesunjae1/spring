@@ -46,4 +46,13 @@ public class UserController {
 		
 		return user;
 	}
+	
+	@GetMapping("ch02/ex01/42")
+	@ModelAttribute("man")
+	public User handler42(User user) {
+		user.setUsername("박건우");
+		user.setAge(41);
+		
+		return user;
+	}
 }
