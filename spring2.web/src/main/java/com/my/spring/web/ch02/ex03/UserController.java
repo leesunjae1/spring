@@ -13,7 +13,7 @@ public class UserController {
 		return "ch02/ex03/userIn";
 	}
 	
-	@PostMapping //command를 이용  
+	@PostMapping
 	public String userOut(User user) {
 		return "ch02/ex03/userOut";
 	}

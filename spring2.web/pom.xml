@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.my</groupId>
-	<artifactId>spring.web.23.03</artifactId>
+	<artifactId>spring.web</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 	<name>spring.web</name>
@@ -84,5 +84,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

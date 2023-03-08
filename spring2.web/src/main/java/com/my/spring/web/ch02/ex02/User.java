@@ -1,8 +1,6 @@
-package com.my.spring.web.ch02.ex03;
+package com.my.spring.web.ch02.ex02;
 
 import java.time.LocalDate;
-
-import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,6 +10,5 @@ import lombok.Getter;
 public class User {
 	private String username;
 	private int age;
-	@DateTimeFormat(pattern="yyyy-MM-dd") 
 	private LocalDate regDate;
 }

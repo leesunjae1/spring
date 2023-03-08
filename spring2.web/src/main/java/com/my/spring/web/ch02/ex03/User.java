@@ -12,6 +12,6 @@ import lombok.Getter;
 public class User {
 	private String username;
 	private int age;
-	@DateTimeFormat(pattern="yyyy-MM-dd") 
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate regDate;
 }
