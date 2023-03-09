@@ -5,7 +5,18 @@ function listUsers() {
 	$.ajax({
 		url: 'user/list',
 		success: userList => {
+			users = []
+			userList.forEach(user => {
+				users.push(
+					'<li>' + 
+				      user.userId + ', ' +
+				      user.username + ', ' +
+					  user.birthday +
+				    '</li>')
+			})
 			
+			$('#userList').empty()
+			$('#userList').append(users.join(''))
 		}
 	})
 }
