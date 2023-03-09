@@ -3,6 +3,7 @@ package com.my.spring.web.ch02.ex04;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,13 +18,14 @@ public class CheckController {
 		return "ch02/ex04/main";
 	}
 	
+	@GetMapping("choice")
 	public String choice(int kind) {
 		String view = "ch02/ex04/";
 		
-		switch(kind) {
-		case 1: view += "radioIn"; break;
-		case 2: view += "checkboxIn";
-		}
+		view += switch(kind) {
+		case 1 -> "radioIn";
+		default -> "checkboxIn";
+		};
 		
 		return view;
 	}
@@ -34,7 +36,8 @@ public class CheckController {
 	}
 	
 	@PostMapping("checkbox")
-	public String checkbox(@RequestParam("fruit") ArrayList<String> fruits) {
+	public String checkbox(@RequestParam("fruit") ArrayList<String> fruits, Model model) {
+		model.addAttribute("fruits", fruits);
 		return "ch02/ex04/checkboxOut";
 	}
 }
