@@ -9,7 +9,7 @@ import com.my.spring.web.ch05.domain.User;
 import com.my.spring.web.ch05.ex02.dao.UserDao;
 
 @Service("ch05.ex02.userService")
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 	@Autowired private UserDao userDao;
 	
 	@Override
@@ -18,17 +18,17 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	@Override
-	public void addUser(User user){
+	public void addUser(User user) {
 		userDao.insertUser(user);
 	}
 	
 	@Override
-	public void fixUser(User user){
+	public void fixUser(User user) {
 		userDao.updateUser(user);
 	}
 	
 	@Override
-	public void delUser(int userId){
+	public void delUser(int userId) {
 		userDao.deleteUser(userId);
-	}
-}
+	}	
+}	

@@ -1,6 +1,5 @@
 package com.my.spring.web.ch02.ex06;
 
-import org.springframework.boot.web.servlet.server.Session.Cookie;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,8 +7,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 @Controller("ch02.ex06")
@@ -40,5 +39,4 @@ public class UserController {
 		session.invalidate();
 		return "redirect:login";
 	}
-
 }

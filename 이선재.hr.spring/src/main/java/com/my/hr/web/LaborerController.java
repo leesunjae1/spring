@@ -1,4 +1,4 @@
-package com.my.spring.web.ch05.web;
+package com.my.hr.web;
 
 import java.util.List;
 
@@ -13,37 +13,37 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.my.spring.web.ch05.domain.User;
-import com.my.spring.web.ch05.ex02.service.UserService;
+import com.my.hr.domain.Laborer;
+import com.my.hr.service.LaborerService;
 
-@RestController("ch05.ex02.userController")
-@RequestMapping("ch05/ex02/user")
-public class UserController {
-	@Autowired private UserService userService;
+@RestController("laborerController")
+@RequestMapping("laborer")
+public class LaborerController {
+	@Autowired private LaborerService laborerService;
 	
 	@GetMapping
 	public ModelAndView main(ModelAndView mv) {
-		mv.setViewName("ch05/ex02/main");
+		mv.setViewName("main");
 		return mv;
 	}
 	
 	@GetMapping("list")
-	public List<User> getUser() {
-		return userService.getUsers();
+	public List<Laborer> getLaborer() {
+		return laborerService.getLaborers();
 	}
 	
 	@PostMapping("add")
-	public void addUser(@RequestBody User user) {
-		userService.addUser(user);
+	public void addLaborer(@RequestBody Laborer laborer) {
+		laborerService.addLaborer(laborer);
 	}
 	
 	@PutMapping("fix")
-	public void fixUser(@RequestBody User user) {
-		userService.fixUser(user);
+	public void fixLaborer(@RequestBody Laborer laborer) {
+		laborerService.fixLaborer(laborer);
 	}
 	
-	@DeleteMapping("del/{userId")
-	public void delUser(@PathVariable int userId) {
-		userService.delUser(userId);
+	@DeleteMapping("del/{laborerId}")
+	public void delLaborer(@PathVariable int laborerId) {
+		laborerService.delLaborer(laborerId);
 	}
 }

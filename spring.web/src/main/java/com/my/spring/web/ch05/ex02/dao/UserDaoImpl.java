@@ -9,7 +9,7 @@ import com.my.spring.web.ch05.domain.User;
 import com.my.spring.web.ch05.ex02.dao.map.UserMap;
 
 @Repository("ch05.ex02.userDao")
-public class UserDaoImpl implements UserDao{
+public class UserDaoImpl implements UserDao {
 	@Autowired private UserMap userMap;
 	
 	@Override

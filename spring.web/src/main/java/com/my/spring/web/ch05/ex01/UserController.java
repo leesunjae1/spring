@@ -31,13 +31,13 @@ public class UserController {
 		return user;
 	}
 	
-	@PutMapping("put") 
+	@PutMapping("put")
 	public User put(@RequestBody User user) {
 		return user;
 	}
 	
 	@PatchMapping("patch")
-	public User path(@RequestBody User user) {
+	public User patch(@RequestBody User user) {
 		return user;
 	}
 	

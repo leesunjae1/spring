@@ -7,13 +7,12 @@ import org.springframework.stereotype.Repository;
 
 import com.my.spring.web.ch04.dao.map.TodayMap;
 
-@Repository //component가 포함되어있다 
-public class TodayDaoImpl implements TodayDao{
+@Repository
+public class TodayDaoImpl implements TodayDao {
 	@Autowired private TodayMap todayMap;
 	
 	@Override
 	public LocalDate selectToday() {
 		return todayMap.selectToday();
 	}
-
 }

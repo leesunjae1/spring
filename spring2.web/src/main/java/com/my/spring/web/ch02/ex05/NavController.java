@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class NavController {
 	@GetMapping("forward")
 	public String forward() {
-		return "forward: target";
+		return "forward:target";
 	}
 	
 	@GetMapping("target")
@@ -19,12 +19,11 @@ public class NavController {
 	
 	@GetMapping("redirect")
 	public String redirect() {
-		return "redirect: target";
+		return "redirect:target";
 	}
 	
-	@GetMapping("daum")
-	public String daum() {
-		return "redirect:http://daum.net";
+	@GetMapping("naver")
+	public String naver() {
+		return "redirect:https://naver.com";
 	}
-
 }

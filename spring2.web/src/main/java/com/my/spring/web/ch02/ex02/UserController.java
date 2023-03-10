@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller("ch02.ex02")
 @RequestMapping("ch02/ex02")
@@ -20,20 +19,19 @@ public class UserController {
 	/*
 	@PostMapping("userOut")
 	public String userOut(@RequestParam String username,
-			@RequestParam int age,
-			@RequestParam @DateTimeFormat(pattern="yyyy-MM-dd") LocalDate regDate,
-			Model model) {
-		model.addAttribute("user", new User(username,age, regDate));
+						@RequestParam int age,
+						@RequestParam @DateTimeFormat(pattern="yyyy-MM-dd") LocalDate regDate,
+						Model model) {
+		model.addAttribute("user", new User(username, age, regDate));
 		return "ch02/ex02/userOut";
 	}
 	*/
 	@PostMapping("userOut")
-
 	public String userOut(String username,
-							int age,
-							@DateTimeFormat(pattern="yyyy-MM-dd") LocalDate regDate,
-							Model model) {
-		model.addAttribute("user", new User(username,age, regDate));
+						int age,
+						@DateTimeFormat(pattern="yyyy-MM-dd") LocalDate regDate,
+						Model model) {
+		model.addAttribute("user", new User(username, age, regDate));
 		return "ch02/ex02/userOut";
-	}		
+	}
 }

@@ -13,6 +13,6 @@ public class User {
 	private int userId;
 	private String username;
 	@DateTimeFormat(pattern="yyyy-MM-dd")
-	@JsonFormat(pattern="yyyy-MM-dd",timezone="Asia/Seoul")
+	@JsonFormat(pattern="yyyy-MM-dd", timezone="Asia/Seoul")
 	private LocalDate birthday;
 }

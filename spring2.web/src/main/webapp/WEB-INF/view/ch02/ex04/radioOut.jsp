@@ -3,7 +3,7 @@
 <c:if test='${agree == "yes"}'>
 	약관에 동의합니다.
 </c:if>
-<c:if test='${agree =="no"}'>
+<c:if test='${agree == "no"}'>
 	약관에 동의 안합니다.
 </c:if>
 <hr>

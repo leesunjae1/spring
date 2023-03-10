@@ -23,15 +23,21 @@ public class CheckController {
 		String view = "ch02/ex04/";
 		
 		view += switch(kind) {
-		case 1 -> "radioIn";
+		case 1 -> "radioIn"; 
 		default -> "checkboxIn";
 		};
 		
 		return view;
 	}
-	
+	/*
 	@PostMapping("radio")
-	public String radioOut(@ModelAttribute("agree")String agree) {
+	public String radio(String agree, Model model) {
+		model.addAttribute("agree", agree);
+		return "ch02/ex04/radioOut";
+	}
+	*/
+	@PostMapping("radio")
+	public String radio(@ModelAttribute("agree") String agree) {		
 		return "ch02/ex04/radioOut";
 	}
 	
@@ -40,4 +46,5 @@ public class CheckController {
 		model.addAttribute("fruits", fruits);
 		return "ch02/ex04/checkboxOut";
 	}
+	
 }

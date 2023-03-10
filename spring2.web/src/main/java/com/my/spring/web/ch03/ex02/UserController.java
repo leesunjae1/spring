@@ -10,19 +10,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
-import jakarta.servlet.http.HttpServletRequest;
-
 @Controller("ch03.ex02")
 @RequestMapping("ch03/ex02/user")
 public class UserController {
 	@Value("${attachPath}") private String attachPath;
+	
 	@GetMapping
 	public String userIn() {
 		return "ch03/ex02/userIn";
 	}
 	
 	@PostMapping
-	public String userOut(UserDto userDto, HttpServletRequest request, User user) {
+	public String userOut(UserDto userDto, User user) {
 		String filename = userDto.getFace().getOriginalFilename();
 		saveFile(attachPath + "/" + filename, userDto.getFace());
 		
