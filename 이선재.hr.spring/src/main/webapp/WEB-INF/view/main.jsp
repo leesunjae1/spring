@@ -25,7 +25,7 @@
     			})
     			
     			$('#laborerList').empty()
-    			$('#laborerList').append(laborer.join(''))
+    			$('#laborerList').append(laborers.join(''))
     	}
    	})
 } 
