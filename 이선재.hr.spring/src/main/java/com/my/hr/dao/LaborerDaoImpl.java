@@ -1,5 +1,6 @@
 package com.my.hr.dao;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,8 +8,9 @@ import org.springframework.stereotype.Repository;
 
 import com.my.hr.dao.map.LaborerMap;
 import com.my.hr.domain.Laborer;
+import com.my.hr.domain.NoneException;
 
-@Repository("laborerDao")
+@Repository
 public class LaborerDaoImpl implements LaborerDao{
 	@Autowired private LaborerMap laborerMap;
 	
@@ -18,17 +20,19 @@ public class LaborerDaoImpl implements LaborerDao{
 	}
 	
 	@Override
-	public int insertLaborer(Laborer laborer) {
-		return laborerMap.insertLaborer(laborer);
+	public void insertLaborer(String laborerName, LocalDate hireDate) {
+		laborerMap.insertLaborer(laborerName, hireDate);
 	}
 	
 	@Override
-	public int updateLaborer(Laborer laborer) {
-		return laborerMap.updateLaborer(laborer);
+	public void updateLaborer(Laborer laborer) {
+		if(laborerMap.updateLaborer(laborer) == 0)
+			throw new NoneException("해당 노동자가 없습니다.");	
 	}
 	
 	@Override
-	public int deleteLaborer(int laborerId) {
-		return laborerMap.deleteLaborer(laborerId);
+	public void deleteLaborer(int laborerId) {
+		if(laborerMap.deleteLaborer(laborerId) == 0)
+			throw new NoneException("해당 노동자가 없습니다.");
 	}
 }
