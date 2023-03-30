@@ -9,6 +9,4 @@ public class Laborer {
 	private int laborerId;
 	private String laborerName;
 	private LocalDate hireDate;
-	
-	
 }

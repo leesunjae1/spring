@@ -11,7 +11,7 @@ import com.my.hr.domain.Laborer;
 import com.my.hr.domain.NoneException;
 
 @Repository
-public class LaborerDaoImpl implements LaborerDao{
+public class LaborerDaoImpl implements LaborerDao {
 	@Autowired private LaborerMap laborerMap;
 	
 	@Override
@@ -27,7 +27,7 @@ public class LaborerDaoImpl implements LaborerDao{
 	@Override
 	public void updateLaborer(Laborer laborer) {
 		if(laborerMap.updateLaborer(laborer) == 0)
-			throw new NoneException("해당 노동자가 없습니다.");	
+			throw new NoneException("해당 노동자가 없습니다.");
 	}
 	
 	@Override

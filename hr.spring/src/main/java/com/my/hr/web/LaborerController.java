@@ -18,14 +18,14 @@ import org.springframework.web.servlet.ModelAndView;
 import com.my.hr.domain.Laborer;
 import com.my.hr.service.LaborerService;
 
-@RestController
+@RestController("laborerController")
 @RequestMapping("laborer")
 public class LaborerController {
 	@Autowired private LaborerService laborerService;
 	
 	@GetMapping
 	public ModelAndView main(ModelAndView mv) {
-		mv.setViewName("laborerMain");
+		mv.setViewName("laborer/laborerMain");
 		return mv;
 	}
 	
@@ -33,13 +33,13 @@ public class LaborerController {
 	public List<Laborer> getLaborers() {
 		return laborerService.getLaborers();
 	}
-	
+	//parameter가 request가 query형태로 head 또는 json형태로 body에 있다.
 	@PostMapping("add")
 	public void addLaborer(String laborerName,
 			@DateTimeFormat(pattern="yyyy-MM-dd") LocalDate hireDate) {
 		laborerService.addLaborer(laborerName, hireDate);
 	}
-	
+	//parameter가 request body에 있다.
 	@PutMapping("fix")
 	public void fixLaborer(@RequestBody Laborer laborer) {
 		laborerService.fixLaborer(laborer);

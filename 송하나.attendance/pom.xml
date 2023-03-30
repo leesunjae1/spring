@@ -12,7 +12,7 @@
 	<artifactId>attendance</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
-	<name>송하나.attendance</name>
+	<name>송하나.attendance</name>
 	<description>Human Resource</description>
 	<properties>
 		<java.version>17</java.version>

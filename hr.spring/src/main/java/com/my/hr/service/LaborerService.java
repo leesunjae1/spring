@@ -6,7 +6,7 @@ import java.util.List;
 import com.my.hr.domain.Laborer;
 
 public interface LaborerService {
-	List<Laborer> getLaborers();
+	List<Laborer> getLaborers();	
 	void addLaborer(String laborerName, LocalDate hireDate);
 	void fixLaborer(Laborer laborer);
 	void delLaborer(int laborerId);

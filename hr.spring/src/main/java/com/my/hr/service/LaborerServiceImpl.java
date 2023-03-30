@@ -11,7 +11,7 @@ import com.my.hr.domain.Laborer;
 import com.my.hr.domain.NoneException;
 
 @Service
-public class LaborerServiceImpl implements LaborerService{
+public class LaborerServiceImpl implements LaborerService {
 	@Autowired private LaborerDao laborerDao;
 	
 	@Override
