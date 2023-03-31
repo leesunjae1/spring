@@ -3,10 +3,12 @@ package com.my.attendance.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.my.attendance.dao.EmployeeDao;
 import com.my.attendance.domain.Employee;
 
+@Service
 public class EmployeeServiceImpl implements EmployeeService{
 	@Autowired private EmployeeDao employeeDao;
 	

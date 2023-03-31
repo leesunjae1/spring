@@ -4,9 +4,13 @@ import java.time.LocalDate;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class EmployeeDto {
 	private int emp_No;
 	private String emp_Name;

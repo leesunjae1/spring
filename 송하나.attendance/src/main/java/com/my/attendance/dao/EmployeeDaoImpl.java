@@ -3,11 +3,12 @@ package com.my.attendance.dao;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.my.attendance.dao.map.EmployeeMap;
 import com.my.attendance.domain.Employee;
 
-
+@Repository
 public class EmployeeDaoImpl implements EmployeeDao{
 	@Autowired private EmployeeMap employeeMap;
 	
