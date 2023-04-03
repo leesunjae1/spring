@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN' 
+	'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace='com.my.attendance.dao.map.EmployeeMap'>
+	<select id='selectEmployees' resultType='employee'>
+		select employee_no, employee_name, employee_pino, employee_id, employee_email,
+				employee_ph, employee_addr, hire_date, profilefile_name, employee_position
+		from employees
+		where order by employee_no		 
+	</select>
+	
+	<select id='selectEmployee' resultType='employee'>
+		select employee_no
+		from employees
+		where employee_no = #{employeeNo}
+	</select>
+	
+	<insert id='insertEmployee'>
+		insert into employees(employee_no, employee_name, employee_pino, employee_id, employee_email,
+							employee_ph, employee_addr, hire_date, profilefile_name, employee_position)
+		values(#{employeeNo}, #{employeeName}, #{employeePino}, #{employeeId}, #{employeeEmail}, 
+				#{employeePh}, #{employeeAddr}, #{hireDate}, #{profilefileName}, #{employeePosition})					
+	</insert>
+	
+	<update id='updateEmployee'>
+		update employees
+		set employee_name = #{employeeName}, employee_pino = #{employeePino}, employee_id = #{employeeId}, employee_email = #{employeeEmail},
+			employee_ph = #{employeePh}, employee_addr = #{employeeAddr}, hire_date = #{hireDate}, porfilefile_name = #{profilefileName} employee_position = #{employeePosition}
+		where employee_no = #{employeeNo}
+	</update>
+	
+	<delete id='deleteEmployee'>
+		delete employees
+		where employee_no = #{employeeNo}
+	</delete>
+</mapper>	
