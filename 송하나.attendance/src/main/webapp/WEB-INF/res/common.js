@@ -17,7 +17,7 @@ function input_user_header() {
     header_txt += `             <div class="logo_img text-center" onclick="main">로고이미지</div>`
     header_txt += '          </div>'
     header_txt += '          <div class="col mt-1 float-end lnb_btn">'
-    header_txt += '             <a href="employee/login" class="float-end collapse show" id="login_btn"><i class="fa-solid fa-user"></i></a>'
+    header_txt += '             <a href="user/login" class="float-end collapse show" id="login_btn"><i class="fa-solid fa-user"></i></a>'
     header_txt += '             <a href="#" class="float-end collapse" id="showLnb"><i class="fa-solid fa-user"></i></a>'
     header_txt += '             <ul class="lnb collapse">'
     header_txt += '                 <li><a href="../holiday/01.html">연차관리</a></li>'

@@ -11,7 +11,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Autowired private EmployeeMap employeeMap;
 	
 	@Override
-	public Employee loginCheck(String empId, String empPw) {
-		return employeeMap.selectLoginEmp(empId, empPw);
+	public Employee selectEmployee(String employeeId, String employeePw) {
+		return employeeMap.selectEmployee(employeeId, employeePw);
 	}
 }

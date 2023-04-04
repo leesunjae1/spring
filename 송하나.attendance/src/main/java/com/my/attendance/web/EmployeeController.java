@@ -13,18 +13,19 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class EmployeeController {
-	@RequestMapping("employee/login")
+	@RequestMapping("user/login")
 	@GetMapping
 	public String login() {
-		return "employee/login";
+		return "user/login";
 	}
 	
 	@Autowired private EmployeeService employeeService;
 	
-	@RequestMapping("employee/loginEmp")
-	public String getEmployee(@RequestParam("empId") String empId, @RequestParam("empPw") String empPw, HttpSession session) {
+	@RequestMapping("user/loginEmp")
+	public String getLoginEmployee(@RequestParam("employeeId") String employeeId,
+			@RequestParam("employeePw") String employeePw, HttpSession session) {
 		String result = "";
-		Employee emp = employeeService.loginCheck(empId, empPw);
+		Employee emp = employeeService.loginCheck(employeeId, employeePw);
 		if(emp != null) {
 			session.setAttribute("empNo", emp.getEmpNo());
 			session.setAttribute("empId", emp.getEmpId());

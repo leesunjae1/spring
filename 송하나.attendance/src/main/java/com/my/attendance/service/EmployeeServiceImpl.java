@@ -9,9 +9,9 @@ import com.my.attendance.domain.Employee;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 	@Autowired private EmployeeDao employeeDao;
-		
+	
 	@Override
-	public Employee loginCheck(String empId, String empPw) {
-		return employeeDao.loginCheck(empId, empPw);
+	public Employee loginCheck(String employeeId, String employeePw) {
+		return employeeDao.selectEmployee(employeeId, employeePw);
 	}
 }

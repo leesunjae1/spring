@@ -17,3 +17,4 @@ public class AppConfig implements WebMvcConfigurer {
 		registry.addResourceHandler("res/**").addResourceLocations("WEB-INF/res/");
 	}
 }
+

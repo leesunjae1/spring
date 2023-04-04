@@ -19,7 +19,7 @@
         $('#login').click(e => {
         	e.preventDefault()
         	if(isVal($('#empId')) && isVal($('#empPw'))) {
-        		checkEmp($('#empPw').val(), $('#empPw').val())
+        		checkEmp($('#empId').val(), $('#empPw').val())
         	}
         })
     })
@@ -28,11 +28,11 @@
     	$.ajax({
     		url: 'loginEmp',
     		data: ({
-    			empId: id,
-    			empPw: pw
+    			employeeId: id,
+    			employeePw: pw
     		}),
-    		success: emp => {
-    			if(emp.length > 0) {
+    		success: employee => {
+    			if(employee.length > 0) {
     				move()
     			}
     		}

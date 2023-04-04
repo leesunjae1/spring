@@ -31,7 +31,11 @@
 	}
 </script>
 <style>
-
+	.introduce {
+        height: 12rem;
+        border: .1rem solid;
+        line-height: 12rem;
+    }
 </style>
 </head>
 <body>
