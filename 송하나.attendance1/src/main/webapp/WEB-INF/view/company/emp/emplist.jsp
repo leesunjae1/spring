@@ -13,7 +13,7 @@
 <link rel='stylesheet' href='<c:url value="/res/common.css"/>'/>
 <title></title>
 <script>
-    $(() => {
+    $(() => {}
         input_company_header()
         input_company_sidebar()
         input_footer()
