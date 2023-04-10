@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class Employee {
-	private int empNo;
+	private int employeeNo;
 	private String empId;
 	private String empPw;
 	private String empName;
@@ -19,5 +19,5 @@ public class Employee {
 	private String empPosition;
 	private String empPino;
 	private String profileName;
-	private String comId;
+	private String companyId;
 }
